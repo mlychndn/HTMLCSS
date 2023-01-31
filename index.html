@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Basic language of the web: HTML</title>
+    <link rel="stylesheet" href="./style/style.css"" />
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <h1>📘 The Code Magazine</h1>
 
       <nav>
@@ -18,7 +19,7 @@
     </header>
 
     <article>
-      <header>
+      <header class="post-header">
         <h2>The Basic Language of the Web: HTML</h2>
         <img
           src="./img/laura-jones.jpg"
@@ -26,7 +27,9 @@
           width="50"
           height="50"
         />
-        <p>Posted by <b>Laura Jones</b> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <b>Laura Jones</b> on Monday, June 21st 2027
+        </p>
         <img src="./img/post-img.jpg" alt="post-img" width="500" height="200" />
       </header>
 
@@ -36,9 +39,11 @@
         <i>technologies</i>: HTML, CSS and JavaScript. These are the languages
         of the web.
       </p>
-      In this post, let's focus on HTML. We will learn what HTML is all about,
-      and why you too should learn it.
-      <p></p>
+
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
 
       <h3>What is HTML?</h3>
       <p>
@@ -85,7 +90,7 @@
     </article>
     <aside>
       <h4>Related posts</h4>
-      <ul>
+      <ul class="related">
         <li>
           <img
             src="./img/related-1.jpg"
@@ -93,7 +98,7 @@
             width="75"
             height="75"
           /><a href="#">How to Learn Web Development</a>
-          <p>By Jonas Schmedtmann</p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
         <li>
           <img
@@ -102,7 +107,7 @@
             width="75"
             height="75"
           /><a href="#">The Unknown Power of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-author">By Jim Dillon</p>
         </li>
         <li>
           <img
@@ -111,11 +116,13 @@
             width="75"
             height="75"
           /><a href="#">Why JavaScript is Awesome</a>
-          <p>By Matilda</p>
+          <p class="related-author">By Matilda</p>
         </li>
       </ul>
     </aside>
 
-    <footer>Copyright &copy; 2027 by The Code Magazine</footer>
+    <footer>
+      <p id="copyright">Copyright &copy; 2027 by The Code Magazine</p>
+    </footer>
   </body>
 </html>
