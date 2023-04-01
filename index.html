@@ -8,38 +8,42 @@
   <body>
     <div class="container">
       <header class="main-header">
-        <h1>📘 The Code Magazine</h1>
+        <h1 class="container-div-head">📘 The Code Magazine</h1>
 
-        <nav>
-          <a href="blog.html">Blog</a>
-          <a href="challenge1.html">Challenges</a>
-          <a href="#">Flexbox</a>
-          <a href="#">CSS</a>
-          <a href="#">Grid</a>
+        <nav class="nav">
+          <a class="nav-link" href="blog.html">Blog</a>
+          <a class="nav-link" href="challenge1.html">Challenges</a>
+          <a class="nav-link" href="#">Flexbox</a>
+          <a class="nav-link" href="#">CSS</a>
+          <a class="nav-link" href="#">Grid</a>
         </nav>
       </header>
 
       <article>
         <header class="post-header">
-          <h2>The Basic Language of the Web: HTML</h2>
-          <img
-            src="./img/laura-jones.jpg"
-            alt="laura-img"
-            width="50"
-            height="50"
-          />
-          <p id="author">
-            Posted by <b>Laura Jones</b> on Monday, June 21st 2027
-          </p>
+          <h2 class="post-header-h2">The Basic Language of the Web: HTML</h2>
+          <div>
+            <img
+              src="./img/laura-jones.jpg"
+              alt="laura-img"
+              width="50"
+              height="50"
+            />
+
+            <p id="author">
+              Posted by <b>Laura Jones</b> on Monday, June 21st 2027
+            </p>
+          </div>
+
           <img
             src="./img/post-img.jpg"
             alt="post-img"
-            width="500"
-            height="200"
+            width="700"
+            height="250"
           />
         </header>
 
-        <p>
+        <p class="img-para">
           All modern websites and web applications are built using three
           <em>fundamental</em>
           <i>technologies</i>: HTML, CSS and JavaScript. These are the languages
@@ -94,7 +98,7 @@
         </ul>
         <p>Hopefully you learned something new here. See you next time!</p>
       </article>
-      <aside>
+      <aside class="related-container">
         <h4>Related posts</h4>
         <ul class="related">
           <li>
@@ -102,7 +106,7 @@
               src="./img/related-1.jpg"
               alt="related-1"
               width="75"
-              height="75"
+              height="60"
             /><a href="#">How to Learn Web Development</a>
             <p class="related-author">By Jonas Schmedtmann</p>
           </li>
@@ -111,7 +115,7 @@
               src="./img/related-2.jpg"
               alt="related-2"
               width="75"
-              height="75"
+              height="60"
             /><a href="#">The Unknown Power of CSS</a>
             <p class="related-author">By Jim Dillon</p>
           </li>
@@ -120,7 +124,7 @@
               src="./img/related-3.jpg"
               alt="related-3"
               width="75"
-              height="75"
+              height="60"
             /><a href="#">Why JavaScript is Awesome</a>
             <p class="related-author">By Matilda</p>
           </li>

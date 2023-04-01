@@ -22,7 +22,7 @@ h3 {
 }
 
 .container {
-  width: 700px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -38,9 +38,10 @@ h1 {
 h2 {
   font-size: 40px;
   font-family: sans-serif;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   /* background-color: orange; */
   position: relative;
+  display: inline-block;
 }
 
 h3 {
@@ -55,6 +56,8 @@ h4 {
   font-family: sans-serif;
   text-transform: uppercase;
   text-align: center;
+  /* margin: 0; */
+  margin: 20px 0;
 }
 
 p {
@@ -75,9 +78,10 @@ ol {
   margin-bottom: 20px;
 }
 
-/* footer p {
-  font-size: 16px;
-} */
+footer p {
+  background-color: #f7f7f7;
+  padding: 10px 30px;
+}
 
 /* article header p {
   font-style: italic;
@@ -90,6 +94,8 @@ ol {
 #author {
   font-style: italic;
   font-size: 18px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 .related-author {
@@ -190,13 +196,39 @@ h2::first-letter {
 } */
 
 h2::after {
-  content: "Top";
+  content: "TOP";
   background-color: yellow;
   font-size: 18px;
   margin: 2px;
-  padding: 2px 4px;
+  padding: 4px 8px;
   color: black;
   position: absolute;
-  top: -10px;
+  top: -20px;
   right: -20px;
+}
+
+.related-container {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  margin-left: 10px;
+  padding: 0px;
+}
+
+.container-div-head {
+  display: inline-block;
+}
+
+.nav {
+  display: inline-block;
+  margin-left: 100px;
+  padding: 0 20px;
+}
+
+.nav-link {
+  margin: 20px;
+}
+
+.img-para {
+  margin-top: 70px;
 }
