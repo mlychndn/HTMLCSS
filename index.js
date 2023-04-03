@@ -10,25 +10,33 @@
 //   }, 1000);
 // }
 
-const hello2 = async () => {
-  return "Hello Node.js";
-};
+//
+const a = [10, "Tithi", [10, 20], { a: 1, b: 1 }];
 
-const data = hello2();
-console.log(data);
-// hello2().then((data) => {
-//   console.log(data);
-// });
+// for (let i = 0; i <= a.length - 1; i++) {
+//   console.log(typeof a[i]);
+// }
 
-function frequencyCount(num1, num2) {
-  const num1Str = num1.toString().split("").sort().join("");
-  const num2Str = num2.toString().split("").sort().join("");
+// let i = 0;
+// while (i < a.length) {
+//   console.log(a[i]);
+//   i++;
+// }
 
-  if (num1Str === num2Str) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-}
+// a.push(10);
+// a.push(20);
+// a.push(30);
+// a.push(40);
+// a.push(50);
 
-frequencyCount(182, 281);
+// a.pop();
+// a.pop();
+// console.log(a);
+// console.log(a.length);
+
+// console.log(a);
+
+// let b = 10;
+// console.log(typeof b);
+// console.log(typeof a);
+// console.log(typeof "tithi");
