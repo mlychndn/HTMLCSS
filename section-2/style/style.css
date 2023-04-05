@@ -1,12 +1,38 @@
-h1,
+* {
+  /* border-top: 5px solid blue;  it's applied to every elements*/
+  /* margin: 0; */
+  margin: 0;
+  padding: 0;
+}
+
+/* Inheritaed values have the lowest priority*/
+
+body {
+  color: #444;
+  font-family: sans-serif;
+
+  /* border-top: 5px solid blue; it will not inherited to all child elements */
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+/* h1,
 h2,
 h3,
 h4,
 p,
 li {
   font-family: sans-serif;
-  color: #444;
-}
+} */
 
 h1,
 h2,
@@ -24,8 +50,14 @@ h2 {
   font-size: 40px;
 }
 
+.post-header {
+  margin-bottom: 30px;
+}
+
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -37,10 +69,21 @@ h4 {
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 15px;
+}
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
 
 /* footer p {
@@ -69,14 +112,12 @@ li {
   font-weight: bold;
 }
 
-.main-header {
-  background-color: #f7f7f7;
-}
-
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
+  width: 500px;
 }
 
 /* pseudo class */
@@ -94,6 +135,12 @@ li:last-child {
 
 /* styling links*/
 /* order should be specific lvha*/
+
+/* pseudo class has more priority than simple element, here a css will no used*/
+
+a {
+  color: orangered;
+}
 
 a:link {
   color: #1098ad;
@@ -114,3 +161,39 @@ a:active {
   background-color: black;
   font-style: italic;
 }
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+/* priprity in same element: !important > id > class > element , never use !important*/
+/* #copyright {
+  background-color: #f7f7f7;
+  color: #444;
+}
+
+.copyright {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.test-class {
+  background-color: rgba(11, 124, 11, 0.466);
+  color: #fff;
+  font-weight: 60px;
+  font-style: normal;
+}
+
+footer p {
+  background-color: orange !important;
+  color: #fff;
+  font-weight: bold;
+  font-style: italic;
+} */
+
+/* =========================================================================   */
+
+/* Inheritane and universal selector*/
