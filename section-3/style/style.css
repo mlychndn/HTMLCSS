@@ -301,3 +301,8 @@ aside {
   clear: both;
   padding: 20px;
 }
+
+.related {
+  margin: 0;
+  padding: 20px 40px;
+}
