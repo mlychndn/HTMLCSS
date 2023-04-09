@@ -67,6 +67,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 p {
@@ -328,4 +329,32 @@ aside {
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
+  font-size: 14px;
+}
+
+.related-author p {
+  font-size: 14px;
+  margin: 10px 0;
+  display: block;
+}
+
+/* .container {
+  display: flex;
+} */
+
+.post-container {
+  display: flex;
+  gap: 75px;
+  align-items: flex-start;
+}
+
+aside {
+  width: 300px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.btn-like:hover {
+  background-color: orangered;
+  color: #fff;
 }
