@@ -1,0 +1,15 @@
+12 hours = 360
+1 hour = 360/12 = 30
+n hour = 30n
+60 min = 30
+1 min = 30/60 == 1/2
+
+total angle = 30h + 1/2m
+
+
+60 min = 360
+1 min = 360/60 = 6m
+
+
+60 sec = 360
+1 sec = 360/60 = 6s
