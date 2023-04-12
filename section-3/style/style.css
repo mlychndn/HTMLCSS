@@ -23,7 +23,7 @@ body {
 .main-header {
   background-color: #f7f7f7;
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 
   /* height: 80px; */
 }
@@ -125,7 +125,7 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 50px 0;
-  width: 500px;
+  /* width: 500px; */
 }
 
 /* pseudo class */
@@ -342,20 +342,39 @@ aside {
   display: flex;
 } */
 
-.post-container {
+/* .post-container {
   display: flex;
   gap: 75px;
   align-items: flex-start;
-}
+} */
 
-aside {
+/* aside {
   width: 300px;
   flex-grow: 1;
   flex-shrink: 0;
-}
+} */
 
 .btn-like:hover {
   background-color: orangered;
   color: #fff;
   border: 1px solid orangered;
+}
+
+/* grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1/-1;
+}
+
+footer {
+  grid-column: 1/-1;
 }
