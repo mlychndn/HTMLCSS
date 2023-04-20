@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+.accordian {
+  width: 800px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 500;
+  color: #adb5bd;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.btn {
+  margin: 0;
+  border: none;
+  background-color: #fff;
+}
+
+.hidden-box p {
+  color: #343a40;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.hidden-box ul {
+  color: #adb5bd;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-left: 24px;
+}
+
+.hidden-box {
+  grid-column: 2/3;
+
+  display: none;
+}
+
+.btn--icon {
+  height: 24px;
+  width: 24px;
+  stroke: #087f5b;
+}
+
+.open {
+  border-top: 4px solid #087f5b;
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .number {
+  color: #087f5b;
+}
+
+.open .text {
+  color: #087f5b;
+}
