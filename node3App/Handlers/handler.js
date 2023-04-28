@@ -58,6 +58,26 @@ const promiseResult = function (file) {
   });
 };
 
+function matchInfo(balls) {
+  const output = {};
+  balls.forEach((match) => {
+    const { bowler, runs, year } = match;
+
+    if (!output[year]) {
+      output[year] = {};
+    }
+
+    if (!output[year][bowler]) {
+      output[year][bowler] = { totalballs: 0, totalruns: 0 };
+    }
+
+    output[year][bowler].totalballs++;
+    output[year][bowler].totalruns += runs;
+  });
+
+  return output;
+}
+
 exports.matchResultHandler = async (req, res) => {
   try {
     const matchData = await promiseResult("./matches.csv");
@@ -75,19 +95,6 @@ exports.matchResultHandler = async (req, res) => {
     res.status(200).json({
       ...result,
     });
-  } catch (error) {
-    res.status(400).json({
-      status: "error",
-      message: error.message,
-    });
-  }
-};
-
-exports.matchDataHandler = async (req, res, next) => {
-  try {
-    // const matches = await promiseResult("./matches.csv");
-    // req.matches = matches;
-    next();
   } catch (error) {
     res.status(400).json({
       status: "error",
@@ -147,12 +154,80 @@ exports.statsHandler = async (req, res) => {
         obj[match.year][match.team]["count6"] =
           (obj[match.year][match.team]["count6"] || 0) + 1;
       }
+
+      if (match.total) {
+        obj[match.year][match.team]["total"] =
+          (obj[match.year][match.team]["total"] || 0) + match.total * 1;
+      }
     });
 
     res.status(200).json(obj);
   } catch (error) {
     res.status(400).json({
       status: "error",
+      message: error.message,
+    });
+  }
+};
+
+exports.economyHandler = async (req, res) => {
+  try {
+    const statsJsonArray = await csvv().fromFile("./deliveries.csv");
+    const matchJsonArray = await csvv().fromFile("./matches.csv");
+
+    const years = [...new Set(matchJsonArray.map((match) => match.SEASON))];
+
+    statsJsonArray.forEach((stats) => {
+      matchJsonArray.forEach((match) => {
+        if (stats.MATCH_ID === match.MATCH_ID) {
+          stats.YEAR = match.SEASON;
+        }
+      });
+    });
+
+    // console.log(statsJsonArray);
+
+    const bowlerData = statsJsonArray.map((stats) => {
+      let obj = {};
+      obj["bowler"] = stats.BOWLER;
+      obj["runs"] =
+        stats.TOTAL_RUNS * 1 - (stats.LEGBYE_RUNS * 1 + stats.BYE_RUNS * 1);
+      obj["year"] = stats.YEAR;
+      obj["id"] = stats.MATCH_ID;
+
+      return obj;
+    });
+
+    //
+    console.log(bowlerData);
+
+    const bowlerNameByYear = [];
+    years.forEach((year) => {
+      bowlerData.forEach((bowler) => {
+        if (bowler.year === year) {
+          let obj = {};
+          obj["year"] = year;
+          obj["bowler"] = bowler.bowler;
+          obj["runs"] = bowler.runs;
+          bowlerNameByYear.push(obj);
+        }
+      });
+    });
+
+    // console.log(matchInfo(bowlerNameByYear));
+
+    const output = {};
+
+    for (let d in bowlerNameByYear) {
+      const year = 
+    }
+
+    res.status(200).json({
+      status: "success",
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: error,
       message: error.message,
     });
   }

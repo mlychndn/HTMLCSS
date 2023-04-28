@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Jade Template Engine
+  body
+   - console.log(Teachers);
+    h1 Conditions and Loops in Jade
+    if option === 'students'
+      ol
+        each student in Students
+          li= student
+    else if option === 'teachers'
+      ol
+        each teacher in Teachers
+          li= teacher
+    else 
+      p You have entered wrong option!
+
+      //- create a node js application using jade template engine  and express
+
+
+      
