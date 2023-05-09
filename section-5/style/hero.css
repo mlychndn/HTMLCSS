@@ -27,13 +27,17 @@ header {
 
   position: relative;
 }
+.header-container {
+  width: 1200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
 
 .left-content {
-  width: 600px;
-  position: absolute;
-  left: 0;
-  top: 50vh;
-  transform: translate(50%, -50%);
+  width: 50%;
 }
 nav {
   font-size: 20px;
